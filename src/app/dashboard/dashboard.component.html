@@ -10,7 +10,7 @@
       <li><a (click)="profile()"> 
         <div class="pro">
         <img class="profilepic" [src]="retrievedImage">
-        <p style="margin-top: 10px; margin-left: 10px;">{{response.Data.FirstName}}{{response.Data.LastName}}</p></div></a></li>
+        <p style="margin-top: 10px; margin-left: 10px;">{{response.Data.FirstName}} {{response.Data.LastName}}</p></div></a></li>
     </ul>
   </nav>
 <div class="content" [class.loading]="isLoading">
