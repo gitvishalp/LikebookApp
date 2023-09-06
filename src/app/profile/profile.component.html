@@ -1,0 +1,87 @@
+<nav class="navbar">
+    <ul class="nav-links">
+      <li><a routerLink="/loginsignup"><i class="bi bi-power"></i>&nbsp;Logout </a></li>
+      <li><a (click)="dashboard()"><i class="bi bi-house"></i>&nbsp;Home</a></li>
+      <li><a (click)="friend()"><i class="bi bi-person"></i>&nbsp;Friends </a></li>
+      <li><a (click)="profile()"><i class="bi bi-person-bounding-box"></i>&nbsp;Profile</a></li>
+      <li><a (click)="notification()"><i class="bi bi-bell-fill"></i>&nbsp;Notifications</a></li>
+    </ul>
+  </nav>
+<div class="content" [class.loading]="isLoading">
+    <app-loader *ngIf="isLoading"></app-loader> 
+    <div class="mngtext">
+        <button (click)="onVisible()">Manage</button>
+    </div>
+    <div class="Manage" *ngIf="visible">
+        <ul>
+            <li><i class="bi bi-lock"></i>&nbsp;<a (click)="changePassword()">Change Password</a></li><hr>
+            <li><i class="bi bi-trash"></i>&nbsp;<a (click)="onModal()">Delete Account</a></li><hr>
+            <li><i class="bi bi-person"></i>&nbsp;<a (click)="profilepic()">Upload Profile</a></li><hr>
+            <li><i class="bi bi-person-x"></i>&nbsp;<a (click)="removeProfile()">Remove Profile</a></li><hr>
+            <li><i class="bi bi-pencil-square"></i>&nbsp;<a (click)="updateuser()">Update Details</a></li>
+        </ul>
+    </div>
+    <div class="modal" *ngIf="show">
+        <p class="modalp">This account never be recovered once delete!!</p>
+        <button class="btn" (click)="onModal()">Cancel</button>
+        <button class="btn2" (click)="deleteAccount()">Delete</button>
+    </div>
+    <div class="user-details">
+        <p>{{deleteResponse.Message}}</p>
+        <table>
+           
+            <tr style="box-shadow: none;">
+                <td rowspan="2" *ngIf=retrievedImage>
+                    <img class="profilepic" [src]="retrievedImage">
+                    <p class="edit" (click)="profilepic()"><i class="bi bi-pencil-square"></i></p>
+                </td>
+                <td rowspan="2" *ngIf=!retrievedImage>
+                    <img class="profilepic" src="/assets/user.png">
+                    <p class="edit" (click)="profilepic()"><i class="bi bi-pencil-square"></i></p>
+                </td>
+                
+            </tr>
+            <tr style="box-shadow: none;padding: 0;">
+                <td colspan="2"><p class="name">{{response.Data.FirstName}}&nbsp;{{response.Data.LastName}}&nbsp;<i class="bi bi-patch-check-fill"></i></p> 
+                <br><p class="about">{{response.Data.Occupation}}</p>   <p class="edit-user" (click)="updateuser()"><i class="bi bi-pencil-square"></i></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">UserId</td>
+                <td class="data">{{response.Data.UserId}}</td>
+            </tr>
+            <tr>
+                <td class="label">Email Address</td>
+                <td class="data">{{response.Data.EmailAddress}}</td>
+            </tr>
+            <tr>
+                <td class="label">Phone Number</td>
+                <td class="data">{{response.Data.PhoneNumber}}</td>
+            </tr>
+            <tr>
+                <td class="label">Date of Birth</td>
+                <td class="data">{{response.Data.DateOfBirth}}</td>
+            </tr>
+            <tr>
+                <td class="label">Password</td>
+                <td class="data">{{response.Data.Password}}</td>
+            </tr>
+            <tr>
+                <td class="label">Country</td>
+                <td class="data">{{response.Data.Country}}</td>
+            </tr>
+            <tr>
+                <td class="label">Account Type</td>
+                <td class="data">{{response.Data.AccountType}}</td>
+            </tr>
+            <tr>
+                <td class="label">Is Active</td>
+                <td class="data">{{response.Data.Active}}</td>
+            </tr>
+             <tr>
+                <td class="label">Status</td>
+                <td class="data">{{response.EmailStatus}} </td>
+            </tr>
+        </table>
+    </div>
+</div>

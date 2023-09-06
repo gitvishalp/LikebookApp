@@ -1,0 +1,19 @@
+
+<div class="otp-container">
+  <div class="otp-form">
+    <h2>OTP</h2>
+    <p>{{response.Message}}</p>
+    <form #otpForm="ngForm" (ngSubmit)="verifyEmail(otpForm.value)">
+      <input type="text" maxlength="1" class="otp-input" name="first" ngModel required="true" />
+      <input type="text" maxlength="1" class="otp-input" name="sec" ngModel required="true"/>
+      <input type="text" maxlength="1" class="otp-input" name="third" ngModel required="true"/>
+      <input type="text" maxlength="1" class="otp-input" name="fourth" ngModel required="true"/>
+      <div class="btn">
+        <a (click)="resendOtp()">resend</a><br> 
+        <button type="submit" [class.loading]="isLoading">
+          <app-loader *ngIf="isLoading"></app-loader>
+          Verify OTP</button>
+      </div>
+    </form>
+  </div>
+</div>

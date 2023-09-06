@@ -1,0 +1,23 @@
+<div class="content">
+    <div class="friend-list">
+        <h2>Search Results for : {{name}} </h2>
+            <p class="Message">{{Message}}</p>
+        <ul *ngFor="let user of users">
+            <li>
+                <div class="user">
+                    <img class="profile" [src]="user.profile.imageData"/>
+                    <div class="details">
+                        <p class="name">{{user.firstName}}&nbsp;{{user.lastName}}</p>
+                        <div class="other">
+                            <div class="occuption">{{user.occupation.name}}</div>
+                            <div class="country">{{user.country}}</div>
+                        </div>
+                    </div>
+                   <div class="add">
+                    <button>Add Friend</button>
+                   </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

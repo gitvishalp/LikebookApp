@@ -1,0 +1,12 @@
+<div class="forms-container">
+    <div class="login-form">
+      <h2>Login with Code</h2>
+      <form #loginFrom="ngForm" (ngSubmit)="onLogin(loginFrom.value)"> 
+        <input type="text" name="Email" placeholder="Email" ngModel required>
+        <input type="text" name="Code" placeholder="Code" ngModel required>
+        <p>{{logniResponse.Message}}</p>
+        have Password?&nbsp;<a routerLink="/loginsignup">Login with Password</a>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    </div>

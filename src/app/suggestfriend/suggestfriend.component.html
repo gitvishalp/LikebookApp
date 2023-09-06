@@ -1,0 +1,53 @@
+<nav class="navbar">
+    <ul class="nav-links">
+      <li><a routerLink="/loginsignup"><i class="bi bi-power"></i>&nbsp;Logout </a></li>
+      <li><a (click)="dashboard()"><i class="bi bi-house"></i>&nbsp;Home</a></li>
+      <li><a (click)="friend()"><i class="bi bi-person"></i>&nbsp;Friends </a></li>
+      <li><a (click)="profile()"><i class="bi bi-person-bounding-box"></i>&nbsp;Profile</a></li>
+      <li><a (click)="notification()"><i class="bi bi-bell-fill"></i>&nbsp;Notifications</a></li>
+    </ul>
+  </nav>
+<div class="content">
+    <div class="friend-list">
+        <h2>Your Friends</h2>
+        <p class="msg" *ngIf="Message2">{{removeResponse.Message}}</p>
+        <ul class="list" *ngFor="let friend of friends">
+            <li>
+                <div class="user">
+                    <img class="profile" [src]="friend.friend.profile.imageData">
+                    <div class="details">
+                        <p class="name">{{friend.friend.firstName}}&nbsp;{{friend.friend.lastName}}</p>
+                        <div class="other">
+                            <div class="occuption">{{friend.friend.occupation.name}}</div>
+                            <div class="country">{{friend.friend.country}}</div>
+                        </div>
+                    </div>
+                    <div class="remove">
+                        <button (click)="removeFriend(friend.friend.id)">Remove Friend</button>
+                       </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="friend-list">
+        <h2>Friend suggestion</h2>
+        <p class="msg" *ngIf="Message">{{addResonse.Message}}</p>
+        <ul class="list" *ngFor="let user of users">
+            <li>
+                <div class="user">
+                    <img class="profile" [src]="user.profile.imageData"/>
+                    <div class="details">
+                        <p class="name">{{user.firstName}}&nbsp;{{user.lastName}}</p>
+                        <div class="other">
+                            <div class="occuption">{{user.occupation.name}}</div>
+                            <div class="country">{{user.country}}</div>
+                        </div>
+                    </div>
+                   <div class="add">
+                    <button (click)="addFriend(user.id)">Add Friend</button>
+                   </div>
+                </div> 
+            </li>
+        </ul>
+    </div>
+</div>

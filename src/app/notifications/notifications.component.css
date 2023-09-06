@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@500&display=swap');
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+*{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar {
+    background-color: #328091;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+  }
+
+  .nav-links {
+    background-color: #328091;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links i{
+    color: #ffff;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #f39c12;
+  }
+
+  .notification-list{
+    margin-top: 20px;
+}
+h2{
+    margin-left: 40px;
+    color: #328091;  
+    margin-bottom: 20px;
+}
+.list{
+  list-style: none; 
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 5px;
+  background-color: #ecf1ee;
+}
+.notification{
+  transition: 0.5s ease-in;
+  padding: 5px;
+}
+.title{
+  font-family: 'Roboto','sans-serif';
+  color: #328091;
+}
+.message{
+  margin-left: 25px;
+}
+.main{
+  display: flex;
+}
+.date{
+  position: absolute;
+  margin-left: 72%;
+  font-size: 12px;
+  color: #929393;
+}
+.remove{
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+.remove i{
+  cursor: pointer;
+  font-size: 20px;
+  color: #328091;
+  transition: 0.5s ease-in;
+}
+.remove i:hover{
+  color: #f39c12;
+}

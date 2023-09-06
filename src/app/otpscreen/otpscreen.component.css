@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.otp-container {
+    text-align: center;
+  }
+  .otp-form{
+    margin-top: 100px;
+    color: #328091;;
+  }
+  .otp-input {
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  .otp-form button{
+    margin-top: 10px;
+    background-color: #328091;
+    width: 150px;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .otp-form button:hover{
+    background-color: #1f5b68;
+    
+   }
+  .btn{
+    margin-top: 20px;
+  }
+  .btn a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #328091;
+  }
+  .otp-input:focus {
+    border-color: #328091;
+  }
+  p{
+    font-size: 10px;
+    color:red;
+  }
+
+  

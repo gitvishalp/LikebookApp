@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@500&display=swap');
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+*{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.friend-list{
+    margin-top: 20px;
+}
+h2{
+    margin-left: 40px;
+    color: #328091;  
+    margin-bottom: 20px;
+}
+
+img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+ul{
+    list-style: none; 
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 5px;
+    background-color: #ebeeec;
+}
+.name{
+    font-family: 'Roboto','sans-serif';
+    font-size: 20px;
+}
+.occuption,.country{
+    font-size: 14px;
+}
+.user{
+    margin-left: 40px;
+    display: flex;
+}
+.details{
+    margin-left: 20px;
+}
+.add{
+    margin-left: auto;
+    margin-right: 40px;
+    float: right;
+    text-align: center;
+}
+.remove{
+        margin-left: auto;
+        margin-right: 40px;
+        float: right;
+        text-align: center;
+}
+button{
+    margin-top: 10px;
+    background-color: #328091;
+    width: 150px;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}   
+button:hover{
+    background-color: #1f5b68;
+}
+.navbar {
+    background-color: #328091;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+  }
+
+  .nav-links {
+    box-shadow: none;
+    background-color: #328091;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links i{
+    color: #ffff;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #f39c12;
+  }
+  .msg{
+    color: red;
+    font-size: 18px;
+    margin-left: 40px;
+  }

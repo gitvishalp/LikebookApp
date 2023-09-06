@@ -1,0 +1,12 @@
+
+<nav class="navbar">
+  <div class="logo"><p class="first">L</p><p class="sec">B</p><p class="text">LikeBook</p>
+    <div class="search-bar"> 
+      <form #serchUserForm="ngForm" (ngSubmit)="onSearchUser(serchUserForm.value)">
+        <input type="text" name="Name" ngModel placeholder="Search Friends">
+        <button type="submit">Search</button>
+        </form>
+      </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

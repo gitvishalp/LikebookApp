@@ -1,0 +1,64 @@
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a routerLink="/loginsignup"><i class="bi bi-power"></i>&nbsp;Logout </a></li>
+    <li><a (click)="dashboard()"><i class="bi bi-house"></i>&nbsp;Home</a></li>
+    <li><a (click)="friend()"><i class="bi bi-person"></i>&nbsp;Friends </a></li>
+    <li><a (click)="profile()"><i class="bi bi-person-bounding-box"></i>&nbsp;Profile</a></li>
+    <li><a (click)="notification()"><i class="bi bi-bell-fill"></i>&nbsp;Notifications</a></li>
+  </ul>
+</nav>
+<div class="form-container">
+    <h2>Update User Details</h2>
+    <form #createUserForm="ngForm" (ngSubmit)="onUpdateUser(createUserForm.value)">
+      <div class="form-group">
+        <input type="text" id="firstname" name="FirstName" ngModel required="true">
+        <label for="firstname">First Name</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="lastname" name="LastName" ngModel required="true">
+        <label for="lastname">Last Name</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="password" name="Password" ngModel required="true">
+        <label for="password">Password</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="phone" name="PhoneNumber" ngModel required="true">
+        <label for="phone">Phone Number</label>
+      </div>
+      <div class="form-group">
+        <input type="date" id="dob" name="DateOfBirth" ngModel required="true">
+        <label for="dob">Date of Birth</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="country" name="Country" ngModel required="true">
+        <label for="country">Country</label>
+      </div>
+      <div class="form-group">
+        <select name="AccountType" ngModel >
+          <option value="PERSONAL">PERSONAL</option>
+            <option value="PUBLIC">PUBLIC</option>
+        </select>
+        <label class="auto">Account Type</label>
+      </div>
+      <div class="form-group">
+        <select name="Occupation" ngModel>
+            <option value="STUDENT">STUDENT</option>
+            <option value="PVTEMP">PRIVATE EMPLOYEE</option>
+            <option value="GOVTEMP">GOVT. EMPLOYEE</option>
+            <option value="CELEB">CELEBRITY</option>
+            <option value="OTHER">OTHER</option>
+        </select>
+        <label class="auto">Occuption</label>
+      </div>
+      <p>{{response.Message}}</p>
+      <button type="reset" style="margin-right: 20px;">Reset</button>
+      <button type="submit" [class.loading]="isLoading">
+        <app-loader *ngIf="isLoading"></app-loader>
+        Update</button>
+    </form>
+  </div>
+  
+
+
+

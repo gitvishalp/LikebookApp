@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+  }
+  hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  
+  .forms-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .login-form{
+    width: 300px;
+  }
+  .signup-form{
+    width: 300px;
+  }
+  
+  .login-form h2{
+   
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #328091;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .signup-form h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #f39c12;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  /* ... Previous CSS ... */
+  
+  .login-form input{
+    transition:  0.3s ease;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+  }
+  .signup-form input {
+    transition:  0.3s ease;
+    width: 85%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+  }
+  
+  .login-form button{
+    margin-top: 10px;
+    background-color: #328091;
+    width: 150px;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .signup-form button {
+    margin-top: 10px;
+    background-color: #f39c12;
+    width: 150px;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition:  0.3s ease;
+  }
+  
+  .login-form button:hover{
+    background-color: #1f5b68;
+    transition: color 0.3s ease;
+  }
+  .signup-form button:hover {
+    background-color: #e67e22;
+  }
+  .vertical-line {
+    width: 1px;
+    background-color: #ddd;
+    margin: 20px 10px;
+  }
+  
+  .login-form input:focus{
+   border-bottom: 2px solid #328091;
+  }
+  
+  .signup-form input:focus{
+    border-bottom: 2px solid #f39c12;
+  }
+
+  .login-form input:hover{
+    border-bottom: 2px solid #328091;
+   }
+   
+   .signup-form input:hover{
+     border-bottom: 2px solid #f39c12;
+   }
+  p{
+    font-size: 12px;
+    color: red;
+  }
+  a{
+    text-decoration: none;
+    color: #1f5b68;
+    font-size: 14px;
+  }

@@ -1,0 +1,22 @@
+<nav class="navbar">
+    <ul class="nav-links">
+      <li><a routerLink="/loginsignup"><i class="bi bi-power"></i>&nbsp;Logout </a></li>
+      <li><a (click)="dashboard()"><i class="bi bi-house"></i>&nbsp;Home</a></li>
+      <li><a (click)="friend()"><i class="bi bi-person"></i>&nbsp;Friends </a></li>
+      <li><a (click)="profile()"><i class="bi bi-person-bounding-box"></i>&nbsp;Profile</a></li>
+      <li><a (click)="notification()"><i class="bi bi-bell-fill"></i>&nbsp;Notifications</a></li>
+    </ul>
+  </nav>
+<div class="container">
+    <div class="col-md-6">
+        <label for="file-upload" class="custom-file-upload">
+            --Select profile picture--
+            <br><i class="bi bi-cloud-upload"></i>
+        </label>
+        <input id="file-upload" type="file" (change)="onFileChanged($event)"/>
+        <p>{{response.Message}}</p>
+    </div>
+    <div class="col-md-6">
+        <input type="button" (click)="onUpload()" value="upload">
+    </div>
+</div>

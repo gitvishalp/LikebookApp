@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@500&display=swap');
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+*{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+table{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 250px;
+    padding: 10px;
+}
+tr{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.label{
+    padding: 10px;
+    width: 200px;
+    color: #328091;
+    }
+
+i{
+    color: green;
+    font-size: 20px;
+}
+.mngtext{
+    text-align: right;
+    background-color: #328091;
+}
+.mngtext button{
+    font-size: 14px;
+    background-color: #328091;
+    color: #ffff;
+    margin-right: 30px;
+    border: none;
+    outline: none;
+}
+.Manage{
+    height: auto;
+    position:absolute;
+    margin-left: 79%;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #f0f2e7;
+    width: 220px;
+    border-radius: 2px;
+}
+ul{
+    list-style: none; 
+    color: green;
+}
+li{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+a{
+    text-decoration: none;
+    font-size: 14px;
+    color: green;
+    cursor: pointer;
+}
+p{
+    color: red;
+    font-size: 14px;
+}
+.modal{
+    transition: 10s ease-in;
+    background-color: #ffff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 400px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 400px;
+    position: absolute;
+    text-align: center;
+    padding: 30px;
+}
+.modalp{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #328091;
+}
+.btn{
+    margin-top: 10px;
+    background-color: #ffff;
+    border: 2px solid #328091;
+    width: 150px;
+    color: #328091;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-right: 20px;
+}
+.btn:hover{
+    background-color: #1f5b68;
+    color: #ffff;
+}
+.btn2{
+    margin-top: 10px;
+    background-color: #328091;
+    width: 150px;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 20px;
+}
+.btn2:hover{
+    background-color: #e67e22;
+}
+.profilepic{
+    height: 150px;
+    width: 150px;
+    border: 3px solid #328091;
+    border-radius: 50%;
+}
+.name{
+    font-size: 25px;
+    color: #328091;
+    font-family: 'Roboto', sans-serif;
+}
+.about{
+    margin-top: -15px;
+    font-size: 15px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+.edit{
+    margin-top: -40px;
+    margin-left: 110px;
+    background-color: #ffff;
+    border-radius: 50%;
+    border: 3px solid #328091;
+    position:absolute;
+    height:25px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.edit-user{
+    margin-top: -18px;
+    margin-left: 110px;
+    background-color: #ffff;
+    position:absolute;
+    height:25px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer; 
+}
+.edit-user i{
+    color: #1f5b68
+}
+.edit i{
+    color: #1f5b68
+}
+
+.navbar {
+    background-color: #328091;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links i{
+    color: #ffff;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #f39c12;
+  }

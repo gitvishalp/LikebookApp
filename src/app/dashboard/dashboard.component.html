@@ -1,0 +1,74 @@
+<nav class="navbar">
+    <ul class="nav-links">
+      <li><a routerLink="/loginsignup"><i class="bi bi-power"></i>&nbsp;Logout </a></li>
+      <li><a (click)="dashboard()"><i class="bi bi-house"></i>&nbsp;Home</a></li>
+      <li><a (click)="friend()"><i class="bi bi-person"></i>&nbsp;Friends </a></li>
+      <li><a (click)="profile()"><i class="bi bi-person-bounding-box"></i>&nbsp;Profile</a></li>
+      <li><a (click)="notification()"><i class="bi bi-bell-fill"></i>&nbsp;Notifications</a>
+        <i style="color:red; position:absolute;margin-left: -112px; font-size: 10px;" class="bi bi-circle-fill"></i>
+      </li>
+      <li><a (click)="profile()"> 
+        <div class="pro">
+        <img class="profilepic" [src]="retrievedImage">
+        <p style="margin-top: 10px; margin-left: 10px;">{{response.Data.FirstName}}{{response.Data.LastName}}</p></div></a></li>
+    </ul>
+  </nav>
+<div class="content" [class.loading]="isLoading">
+    <app-loader *ngIf="isLoading"></app-loader> 
+      <div class="makepost">
+       
+        <h4>What's in your mind? share with your friends</h4>
+       <form #createUserForm="ngForm" (ngSubmit)="onPost(createUserForm.value)">
+        <div class="cap">
+          <textarea name="caption" rows="5" cols="73" ngModel></textarea>
+        </div>
+        <label for="file-upload" class="custom-file-upload">
+          <br><i class="bi bi-image"></i>
+        </label>
+        <input id="file-upload" type="file" (change)="onFileChanged($event)"/>
+        <button type="submit">Post</button>
+       </form>
+      </div>
+    </div>
+    <div class="posts">
+      <div class="post-area">
+        <div *ngFor="let post of postResponse" class="my" >
+          <div class="right">
+          <div class="poster">
+            <img class="propic" [src]="post.user.profile.imageData">
+            <h3>{{post.user.firstName}} {{post.user.lastName}}</h3>
+          </div>
+          <div class="caption">
+            <p style="font-size: 12px; color: #bbb9b9;">Post Date: {{post.postDate}}</p>
+          </div>
+        <div class="caption">
+          {{post.caption}}
+        </div>
+        <div class="pic" (dblclick)="like(post.id)">
+          <img class="image" [src]="post.picture" >
+          <div class="likeshare">
+            <i (click)="like(post.id)" class="bi bi-hand-thumbs-up"></i><font color="#328091" >{{post.likes}}</font>
+            <i (click)="onComment(post.id)" class="bi bi-chat"></i>
+            <i (click)="share()" class="bi bi-send"></i>
+          </div>
+        </div>
+      </div>
+      <div class="left">
+        <div class="comment-box">
+          <form #commentForm="ngForm" (ngSubmit)="comment(commentForm.value,post.id)"> 
+            <textarea class="comment" name="Comment" ngModel></textarea>
+            <button type="submit" style="width: 60px;margin: 0px;margin-top: 115px;">send</button>
+          </form>
+        </div>
+        <div class="com-list">
+          <p style="color: #328091;font-size: 12px;">Comments</p>
+          <ul>
+            <li *ngFor="let com of commentsResponse">
+              <p class="com-user">{{com.user.firstName}} {{com.user.lastName}}</p>
+              <p class="com">{{com.comment}}</p> </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
