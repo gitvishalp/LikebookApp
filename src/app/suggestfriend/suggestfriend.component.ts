@@ -26,7 +26,7 @@ export class SuggestfriendComponent implements OnInit {
       this.router.navigate(['/loginsignup']);
     }
     const header = new HttpHeaders().set('Authorization',`Bearer ${this.token}`);
-    this.http.get('http://localhost:8081/v1/user',{headers:header})
+    this.http.get('http://localhost:8081/v1/friend/suggest',{headers:header})
       .subscribe((res: any)=>{
         this.users=res.Data
         console.log(res.Data)
