@@ -24,7 +24,7 @@ constructor(private http:HttpClient,private router:Router, private route:Activat
         console.log(this.user)
         this.user.profile.imageData = 'data:image/jpeg;base64,' + this.user.profile.imageData;
       })  
-  } 
+  }   
 
   addFriend(Id:any){
     this.FriendId = Id
