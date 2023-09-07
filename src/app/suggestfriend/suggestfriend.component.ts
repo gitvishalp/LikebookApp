@@ -42,6 +42,9 @@ export class SuggestfriendComponent implements OnInit {
     })
     })
   }
+  viewProfile(UserId:String){
+    this.router.navigate(['/viewprofile'],{queryParams:{UserId:UserId,Email:this.mail,token:this.token}});
+  }
 addFriend(Id:any){
   this.FriendId = Id
   const header = new HttpHeaders().set('Authorization',`Bearer ${this.token}`);

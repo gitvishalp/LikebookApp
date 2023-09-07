@@ -15,6 +15,7 @@ import { SuggestfriendComponent } from './suggestfriend/suggestfriend.component'
 import { SearchusersComponent } from './searchusers/searchusers.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 const routes: Routes = [
   {path: 'loginsignup', component: LoginsignupComponent},
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path:'suggest',component:SuggestfriendComponent},
   {path:'search',component:SearchusersComponent},
   {path:'profile',component:ProfileComponent},
-  {path:'notification',component:NotificationsComponent}
+  {path:'notification',component:NotificationsComponent},
+  {path:'viewprofile',component:ViewProfileComponent}
 ];
 
 @NgModule({

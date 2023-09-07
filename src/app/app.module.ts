@@ -19,6 +19,7 @@ import { SuggestfriendComponent } from './suggestfriend/suggestfriend.component'
 import { SearchusersComponent } from './searchusers/searchusers.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
     SearchusersComponent,
     ProfileComponent,
     NotificationsComponent,
+    ViewProfileComponent,
   ],
   imports: [
     BrowserModule,

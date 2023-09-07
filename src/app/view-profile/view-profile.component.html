@@ -1,0 +1,41 @@
+<div class="content">
+    <div class="profile">
+        <div class="head">
+            <div class="Pic">
+             <img [src]="user.profile.imageData">
+            </div>
+            <div class="name">
+                <div class="nm">
+                <p>{{user.firstName}} {{user.lastName}}</p>
+                </div>
+                <div class="occuption">
+                <p>{{user.occupation.name}}</p>
+                </div>
+                <div class="occuption">
+                    <p>{{user.accountType.description}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="other">
+            <table>
+<tr>
+    <td style="color:green">Date of Birth</td>
+    <td>{{user.dateOfBirth}}</td>
+</tr>
+<tr>
+    <td style="color:green">Country</td>
+    <td>{{user.country}}    </td>
+</tr>
+<tr>
+    <td style="color:green">Email</td>
+    <td>{{user.email}}</td>
+</tr>
+<tr>
+    <td style="color:green">Contact</td>
+    <td>{{user.phoneNumber}}</td>
+</tr>   
+            </table>
+            <button (click)="addFriend(user.id)">Add Friend</button>
+        </div>
+    </div>
+    </div>

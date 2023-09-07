@@ -23,6 +23,9 @@
                         </div>
                     </div>
                     <div class="remove">
+                        <button (click)="viewProfile(friend.friend.id)">View Profile</button>
+                       </div>
+                    <div class="remove">
                         <button (click)="removeFriend(friend.friend.id)">Remove Friend</button>
                        </div>
                 </div>
@@ -43,6 +46,9 @@
                             <div class="country">{{user.country}}</div>
                         </div>
                     </div>
+                    <div class="add">
+                        <button (click)="viewProfile(user.id)">View Profile</button>
+                       </div>
                    <div class="add">
                     <button (click)="addFriend(user.id)">Add Friend</button>
                    </div>
